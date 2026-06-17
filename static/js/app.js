@@ -1,80 +1,35 @@
-
-let cart =
-JSON.parse(localStorage.getItem("cart"))
-|| [];
-
-
-
-
-function addCart(name,price){
-
-
-cart.push({
-
-name:name,
-
-price:price
-
-});
-
-
-localStorage.setItem(
-"cart",
-JSON.stringify(cart)
-);
-
-
-
-renderCart();
-
-
+function getCart() {
+    return JSON.parse(
+        localStorage.getItem("cart")
+    ) || [];
 }
 
+function updateCartCount() {
 
+    const cart = getCart();
 
-
-
-function renderCart(){
-
-
-const list =
-document.getElementById("cart-list");
-
-
-list.innerHTML="";
-
-
-cart.forEach(item=>{
-
-
-let li=document.createElement("li");
-
-
-li.innerHTML=
-
-`${item.name}
--
-${item.price.toLocaleString()}원`;
-
-
-list.appendChild(li);
-
-
-});
-
-
-
-document.getElementById("cart-count")
-.innerHTML =
-"Cart "
-+
-cart.length;
-
-
-
+    document.getElementById("cart-count")
+    .innerText = cart.length;
 }
 
+function addToCart(id, name, price) {
 
+    const cart = getCart();
 
+    cart.push({
+        id,
+        name,
+        price
+    });
 
-renderCart();
+    localStorage.setItem(
+        "cart",
+        JSON.stringify(cart)
+    );
+
+    updateCartCount();
+
+    alert("장바구니에 추가되었습니다.");
+}
+
+updateCartCount();
