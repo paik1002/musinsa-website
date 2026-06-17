@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+
+<meta charset="UTF-8">
+<title>MUSINSA STORE</title>
+
+<link rel="stylesheet" href="/static/css/style.css">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+
+<h1>MUSINSA</h1>
+
+
+<nav>
+
+<a href="#">HOME</a>
+<a href="#">SHOP</a>
+<a href="#">STYLE</a>
+<a href="#">EVENT</a>
+
+<span id="cart-count">
+Cart 0
+</span>
+
+</nav>
+
+
+</header>
+
+
+
+
+<section class="banner">
+
+<h2>
+NEW SEASON COLLECTION
+</h2>
+
+<p>
+2026 Spring Fashion
+</p>
+
+
+</section>
+
+
+
+
+
+<section class="products">
+
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab">
+
+
+<h3>
+오버핏 블랙 티셔츠
+</h3>
+
+<p>
+29,000원
+</p>
+
+<button onclick="addCart(
+'오버핏 블랙 티셔츠',
+29000
+)">
+장바구니
+</button>
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+
+<img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c">
+
+
+<h3>
+데일리 후드 집업
+</h3>
+
+
+<p>
+59,000원
+</p>
+
+
+<button onclick="addCart(
+'데일리 후드 집업',
+59000
+)">
+장바구니
+</button>
+
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+
+<img src="https://images.unsplash.com/photo-1525507119028-ed4c629a60a3">
+
+
+<h3>
+와이드 데님 팬츠
+</h3>
+
+
+<p>
+49,000원
+</p>
+
+
+<button onclick="addCart(
+'와이드 데님 팬츠',
+49000
+)">
+장바구니
+</button>
+
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+<section class="cart">
+
+
+<h2>
+장바구니
+</h2>
+
+
+<ul id="cart-list">
+
+</ul>
+
+
+
+</section>
+
+
+
+
+
+<script src="/static/js/app.js"></script>
+
+
+</body>
+
+</html>
