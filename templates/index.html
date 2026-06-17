@@ -1,180 +1,59 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musinsa Clone</title>
 
-<meta charset="UTF-8">
-<title>MUSINSA STORE</title>
-
-<link rel="stylesheet" href="/static/css/style.css">
-
+    <link rel="stylesheet" href="/static/css/style.css">
 </head>
-
-
 <body>
 
-
 <header>
+    <div class="logo">MUSINSA</div>
 
-
-<h1>MUSINSA</h1>
-
-
-<nav>
-
-<a href="#">HOME</a>
-<a href="#">SHOP</a>
-<a href="#">STYLE</a>
-<a href="#">EVENT</a>
-
-<span id="cart-count">
-Cart 0
-</span>
-
-</nav>
-
-
+    <div class="cart-area">
+        🛒 장바구니
+        <span id="cart-count">0</span>
+    </div>
 </header>
 
-
-
-
 <section class="banner">
-
-<h2>
-NEW SEASON COLLECTION
-</h2>
-
-<p>
-2026 Spring Fashion
-</p>
-
-
+    <h1>2026 SUMMER COLLECTION</h1>
 </section>
 
+<section class="product-grid">
 
+    <div class="product-card">
+        <img src="https://picsum.photos/400/500?1">
+        <h3>오버핏 반팔티</h3>
+        <p>29,000원</p>
+        <button onclick="addToCart(1,'오버핏 반팔티',29000)">
+            장바구니 담기
+        </button>
+    </div>
 
+    <div class="product-card">
+        <img src="https://picsum.photos/400/500?2">
+        <h3>와이드 데님팬츠</h3>
+        <p>59,000원</p>
+        <button onclick="addToCart(2,'와이드 데님팬츠',59000)">
+            장바구니 담기
+        </button>
+    </div>
 
-
-<section class="products">
-
-
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab">
-
-
-<h3>
-오버핏 블랙 티셔츠
-</h3>
-
-<p>
-29,000원
-</p>
-
-<button onclick="addCart(
-'오버핏 블랙 티셔츠',
-29000
-)">
-장바구니
-</button>
-
-
-</div>
-
-
-
-
-
-<div class="card">
-
-
-<img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c">
-
-
-<h3>
-데일리 후드 집업
-</h3>
-
-
-<p>
-59,000원
-</p>
-
-
-<button onclick="addCart(
-'데일리 후드 집업',
-59000
-)">
-장바구니
-</button>
-
-
-
-</div>
-
-
-
-
-
-<div class="card">
-
-
-<img src="https://images.unsplash.com/photo-1525507119028-ed4c629a60a3">
-
-
-<h3>
-와이드 데님 팬츠
-</h3>
-
-
-<p>
-49,000원
-</p>
-
-
-<button onclick="addCart(
-'와이드 데님 팬츠',
-49000
-)">
-장바구니
-</button>
-
-
-
-</div>
-
-
+    <div class="product-card">
+        <img src="https://picsum.photos/400/500?3">
+        <h3>레더 스니커즈</h3>
+        <p>89,000원</p>
+        <button onclick="addToCart(3,'레더 스니커즈',89000)">
+            장바구니 담기
+        </button>
+    </div>
 
 </section>
-
-
-
-
-
-<section class="cart">
-
-
-<h2>
-장바구니
-</h2>
-
-
-<ul id="cart-list">
-
-</ul>
-
-
-
-</section>
-
-
-
-
 
 <script src="/static/js/app.js"></script>
 
-
 </body>
-
 </html>
